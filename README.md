@@ -59,7 +59,7 @@ LumenPlayer/
 ├── tools/mpv-dist/         嵌入用的 mpv 运行时源文件（不入库，自备 mpv.exe + d3dcompiler_43.dll）
 ├── tools/gen_test_model.py 生成测试用 ONNX 模型（验证 ORT 链路，几 KB）
 ├── tools/ui_probe.py       无人值守界面探针（启动→注入点击→按客户区截图）
-├── testdata/               SD_480i_30s.mkv（真隔行验证素材）
+├── testdata/               本地测试素材目录（素材不入库，留目录占位）
 ├── third_party/onnxruntime/ 官方 C API 头文件（仅声明，运行期动态加载）
 ├── src/
 │   ├── core/               ★ 产品层：纯 C++17，零第三方依赖（可搬去 Android/鸿蒙）
