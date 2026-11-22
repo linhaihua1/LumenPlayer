@@ -1,0 +1,13 @@
+﻿id,category,path,width,height,fps,seek,note
+dvd_ntsc_01,480i_ntsc,,,,,300,480i NTSC 老剧（隔行+3:2 pulldown）
+dvd_ntsc_02,480i_ntsc,,,,,1200,480i 暗场/夜景（考验噪声放大）
+pal_drama_01,576i_pal,,,,,300,576i PAL 剧集（25fps + 4% 加速）
+pal_drama_02,576i_pal,,,,,900,576i 快速运动场景
+web720_01,720p_web,,,,,600,720p 早期网源（块效应明显）
+web720_02,720p_web,,,,,1500,720p 高码率对照（损伤较轻）
+film_43_01,43_film,,,,,420,4:3 老电影（构图/黑边检测）
+film_43_02,43_film,,,,,1800,4:3 变形宽银幕（SAR 非 1:1）
+anime_90s_01,90s_anime,,,,,240,90 年代赛璐璐动画（平涂+硬边）
+anime_90s_02,90s_anime,,,,,1080,动画快速动作/线条密集
+hardsub_01,hardsub,,,,,360,硬字幕（检验字幕边缘光晕）
+hardsub_02,hardsub,,,,,1440,硬字幕 + 小字号（最容易糊）

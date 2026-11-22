@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "_readme": "复制为 lumen.json 放在 exe 同目录即可生效。相对路径按本文件所在目录解析；路径留空表示自动查找。",
+
+  "ffmpeg": "",
+  "ffprobe": "",
+  "output_dir": "",
+  "preset": "balanced",
+  "anime": false,
+  "crf": 18,
+  "_field_order": "场序覆盖：auto = 自动判定（推荐）；tff / bff = 强制上场/下场优先；progressive = 强制按逐行处理。播放中按 P 键可临时循环切换，不必改这里",
+  "field_order": "auto",
+
+  "engine": {
+    "_backend": "dummy = CPU 双三次（基线，无需任何依赖）；ort = ONNX Runtime 真 AI 超分",
+    "backend": "dummy",
+    "_provider": "auto = 依次尝试 DML → CUDA → CPU；也可写死 cpu / dml / cuda",
+    "provider": "auto",
+    "model_path": "",
+    "_runtime_dir": "onnxruntime.dll 所在目录。留空则找 exe 同目录与系统搜索路径",
+    "runtime_dir": "",
+    "_channels": "3 = RGB 模型（Real-ESRGAN 系）；1 = 仅亮度模型（快 3 倍）",
+    "channels": 3,
+    "_scale": "0 = 按目标分辨率自动推断；2 / 4 强制。模型自带声明时以模型为准",
+    "scale": 0,
+    "_tile_size": "0 = 整帧推理；显存不足时设 256 或 192（必须能被 8 整除）",
+    "tile_size": 0,
+    "allow_fp16": true
+  },
+
+  "player": {
+    "_mpv_path": "mpv.exe 路径。留空则找 exe 同目录 / mpv 子目录 / PATH",
+    "mpv_path": "",
+    "_hwdec": "auto = 硬件解码；某些老片硬解会花屏，可改 no 排除硬解因素",
+    "hwdec": "auto",
+    "_hud": "true = 播放时在右上角显示性能面板（分辨率/帧率/丢帧/处理链）。播放中按 I 键切换",
+    "hud": true,
+    "_resume": "true = 记住每个文件的播放进度，下次打开自动跳回。反复抽查同几秒画面时可设 false",
+    "resume": true,
+    "extra_args": ""
+  }
+}

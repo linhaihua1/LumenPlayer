@@ -1,0 +1,28 @@
+<!--
+  应用图标用 vector 而不是 PNG：
+  这个工程只交付源码、由使用者自己编，省掉一整套 mipmap 尺寸（5 个密度 × 2 套图标）
+  能让仓库保持"只有能读的文本"，不会出现一堆二进制文件没人知道怎么改。
+
+  图形语义：深色底 + 播放三角 + 底部三条横线（暗示场/扫描行）。
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <path
+        android:fillColor="#0E1114"
+        android:pathData="M0,0h108v108h-108z" />
+
+    <path
+        android:fillColor="#4FA3FF"
+        android:pathData="M42,32 L78,54 L42,76 Z" />
+
+    <path
+        android:fillColor="#1E252C"
+        android:pathData="M20,84h68v3h-68z" />
+    <path
+        android:fillColor="#2A3239"
+        android:pathData="M20,91h68v3h-68z" />
+</vector>

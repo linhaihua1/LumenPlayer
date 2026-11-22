@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      刻意不声明 READ_MEDIA_VIDEO / READ_EXTERNAL_STORAGE：
+      选片走 Storage Access Framework（ACTION_OPEN_DOCUMENT），
+      用户选中哪个文件，应用就只能读到那个文件。
+      播放器不需要"扫描全部视频"的能力，少一个权限就少一类隐私争议。
+
+      后续若要做"扫描媒体库批量处理"，再按需申请 READ_MEDIA_VIDEO，
+      并且在运行时解释用途。
+    -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Lumen"
+        android:hardwareAccelerated="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:theme="@style/Theme.Lumen">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!--
+              让 LumenPlayer 出现在"用其他应用打开视频"的列表里。
+              launchMode=singleTask + onNewIntent 处理，避免每次打开都新建一个实例
+              （多个实例同时持有解码器会把低端机的硬解通道占满）。
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

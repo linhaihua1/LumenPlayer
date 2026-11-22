@@ -1,0 +1,21 @@
+{
+  "ffmpeg": "ffmpeg",
+  "aji_harness": "C:/tools/aji/aji_harness.exe",
+  "work_dir": "work",
+  "out_dir": "results",
+  "clips_csv": "clips.csv",
+  "frames": 120,
+  "pixel_format": "p010",
+  "models": [
+    {
+      "id": "live_general_2x",
+      "engine": "models/realesr-general-x4v3.engine",
+      "note": "主测：实景通用模型（BSD-3）。4x 模型，输出后由播放器降采样至 1080p"
+    },
+    {
+      "id": "anime_2x_baseline",
+      "engine": "models/2x_animejanai_v3.engine",
+      "note": "对照：动漫专用实时模型，作为性能天花板参照"
+    }
+  ]
+}

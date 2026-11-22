@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LumenPlayer</string>
+    <string name="open_video">选择视频</string>
+    <string name="reanalyze">重新分析</string>
+</resources>
